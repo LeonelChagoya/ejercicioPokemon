@@ -1,0 +1,46 @@
+
+.conteiner-main{
+    text-align: center;
+}
+.main-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 1.5rem;
+}
+.form-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 0.5rem;
+}
+.text-welcome{
+    text-align: center;
+    padding: 1rem;
+    font-size: 25px;
+    margin: 0;
+}
+.main-select{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    font-size: 20px;
+    margin: 0;
+    justify-content: center;
+}
+.form-select {
+    width: 50%;
+}
+.paginationButton{
+    padding: 1.5rem;
+    text-align: center;
+}
+.bt-pag{
+    background: none;
+    border: none;
+    font-size: 25px;
+    
+}

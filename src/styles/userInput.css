@@ -1,0 +1,115 @@
+.conteiner-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #fff;
+}
+.form-control {
+  background-color: #edd8248c;
+}
+.main {
+  position: absolute;
+  background: yellow;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  align-items: center;
+  background-image:url("/src/images/pokemon-logo.gif");
+  background-size: cover;
+  background-position: center;
+
+}
+.div-left {
+  background: rgb(248, 236, 8);
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: display 0.9s ease-in-out;
+}
+.div-right {
+  background: rgb(248, 236, 8);
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  position: relative;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.div-pokeR {
+  margin-top: -100px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 50%;
+  margin-left: -100px;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+.div-pokeR:before,
+.div-pokeR:after {
+  content: "";
+  position: absolute;
+}
+.div-pokeR:before {
+  background-color: red;
+  width: 100%;
+  height: 50%;
+}
+.div-pokeR:after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background-color: #000;
+}
+.div-pokeRinfe {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  z-index: 10;
+}
+.div-pokeRinfe:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 200px, 0);
+  }
+}
+
+.main:hover .div-left {
+  display: none;
+}
+.main:hover .div-right {
+  display: none;
+}
